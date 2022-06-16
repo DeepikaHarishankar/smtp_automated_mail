@@ -1,0 +1,19 @@
+connection = smtplib.SMTP("smtp.gmail.com", port=587)
+connection.starttls()
+connection.login(user=myemail,password=password)
+connection.sendmail(from_addr=myemail,
+                    to_addrs='deepika_swankar@yahoo.com',
+                    msg='Subject:hi\n\n This is the body of the email')
+connection.close()
+
+
+
+import datetime as dt
+
+now = dt.datetime.now()
+month = now.month
+day_of_week = now.weekday()
+print(day_of_week)
+
+my_date_of_birth = dt.datetime(year=1988,month=7,day=27)
+print(my_date_of_birth)
